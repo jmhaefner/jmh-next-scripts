@@ -4,6 +4,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import invisible_cities.io.channel_param_io as pIO
 
+# Runs without taking arguments. Eventually, should be made to take in the
+# desired h5 file as an argument. Will show plots at the end, although
+# create_sensor_plots can be used on its own to generate the plots without
+# actually showing them.
+
 def create_sensor_plots(h5in, tab_name):
 
     sens = [ sen for sen, (val, err) in pIO.generator_param_reader(h5in, tab_name) ]
